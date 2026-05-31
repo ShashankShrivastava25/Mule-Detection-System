@@ -1,0 +1,26 @@
+name: Deploy backend to Hugging Face
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Push backend/ to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          cd backend
+          git init
+          git add .
+          git commit -m "Sync from GitHub commit ${{ github.sha }}"
+          git branch -M main
+          git push --force "https://Shashank2502:${HF_TOKEN}@huggingface.co/spaces/Shashank2502/mule-detection-system" main
