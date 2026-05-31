@@ -1,3 +1,18 @@
+---
+title: Mule Detection System API
+emoji: 🛡️
+colorFrom: indigo
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
+# Mule Detection System — Backend API
+
+Flask + ensemble ML backend (XGBoost, LightGBM, IsolationForest) for mule-account
+fraud detection. Frontend is hosted separately on Vercel.
+
 # Backend — Fraud Intelligence API
 
 Flask + XGBoost service that powers the dashboard.
