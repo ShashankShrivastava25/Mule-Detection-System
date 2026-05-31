@@ -20,8 +20,11 @@ jobs:
         run: |
           cd backend
           git init
+          git lfs install
+          git lfs track "*.joblib"
           git config user.email "deploy@github.com"
           git config user.name "GitHub Actions"
+          git add .gitattributes
           git add .
           git commit -m "Sync from GitHub commit ${{ github.sha }}"
           git branch -M main
