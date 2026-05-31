@@ -1,0 +1,128 @@
+{
+  "metrics": {
+    "accuracy": 0.9977985690698954,
+    "precision": 0.9285714285714286,
+    "recall": 0.8125,
+    "f1": 0.8666666666666667,
+    "f2": 0.8333333333333334,
+    "auc_pr": 0.8201712670659975,
+    "threshold": 0.6666666666666666
+  },
+  "confusion": {
+    "tp": 13,
+    "fp": 1,
+    "tn": 1800,
+    "fn": 3
+  },
+  "feature_importance": [
+    {
+      "feature": "F1921",
+      "importance": 0.022571308066758024
+    },
+    {
+      "feature": "F3811",
+      "importance": 0.017951602714320274
+    },
+    {
+      "feature": "F3898",
+      "importance": 0.017302357730055302
+    },
+    {
+      "feature": "F3813",
+      "importance": 0.01391206195460767
+    },
+    {
+      "feature": "F1927",
+      "importance": 0.013387578288068334
+    },
+    {
+      "feature": "F2029",
+      "importance": 0.012554538100433946
+    },
+    {
+      "feature": "F949",
+      "importance": 0.010980136575791504
+    },
+    {
+      "feature": "F141",
+      "importance": 0.010902477893929187
+    },
+    {
+      "feature": "F2489",
+      "importance": 0.010847856567199245
+    },
+    {
+      "feature": "F3805",
+      "importance": 0.009873680898152248
+    },
+    {
+      "feature": "F1813",
+      "importance": 0.009820851415383561
+    },
+    {
+      "feature": "F270",
+      "importance": 0.009274039855258168
+    },
+    {
+      "feature": "F1058",
+      "importance": 0.009148739266462456
+    },
+    {
+      "feature": "F1165",
+      "importance": 0.009141454069096423
+    },
+    {
+      "feature": "F3480",
+      "importance": 0.008845925087697904
+    },
+    {
+      "feature": "F1815",
+      "importance": 0.008685328861845677
+    },
+    {
+      "feature": "F321",
+      "importance": 0.00842484050094283
+    },
+    {
+      "feature": "F2285",
+      "importance": 0.008395366380817379
+    },
+    {
+      "feature": "F3534",
+      "importance": 0.008275575718867558
+    },
+    {
+      "feature": "F3801",
+      "importance": 0.007773815267458809
+    },
+    {
+      "feature": "F556",
+      "importance": 0.007398199872692
+    },
+    {
+      "feature": "F1597",
+      "importance": 0.007093231281345317
+    },
+    {
+      "feature": "F210",
+      "importance": 0.00692678207750164
+    },
+    {
+      "feature": "F3642",
+      "importance": 0.006320818658617784
+    },
+    {
+      "feature": "F3800",
+      "importance": 0.006196480590344687
+    }
+  ],
+  "trained_at": 1780160732.8120785,
+  "n_train": 7265,
+  "n_test": 1817,
+  "used_lgbm": true,
+  "blend_weights": {
+    "xgb": 0.45,
+    "lgbm": 0.35,
+    "iso": 0.2
+  }
+}

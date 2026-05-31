@@ -1,0 +1,32 @@
+# Datasets — never commit large source/derived data
+# The dataset lives in backend/data/ locally; gitignore prevents accidental commit.
+backend/data/*.csv
+backend/data/*.csv.gz
+backend/data/*.parquet
+backend/data/*.feather
+data/
+*.parquet
+*.feather
+
+# Python
+.venv/
+ 
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+ 
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+# VS Code
+.vscode/
