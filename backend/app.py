@@ -12,6 +12,8 @@ from flask_cors import CORS
 from core.config import settings
 from core.logging_setup import configure_logging
 from core.registry import MODEL
+from core.db import init_db
+from features.cases import bp as cases_bp
 from features.explain import bp as explain_bp
 from features.health import bp as health_bp
 from features.metrics import bp as metrics_bp
@@ -32,6 +34,11 @@ def create_app() -> Flask:
     app.register_blueprint(predict_bp)
     app.register_blueprint(retrain_bp)
     app.register_blueprint(explain_bp)
+    app.register_blueprint(cases_bp)
+    try:
+        init_db()
+    except Exception as exc:
+        log.warning("Case-management DB init failed: %s", exc)
 
     @app.errorhandler(413)
     def too_large(_):
