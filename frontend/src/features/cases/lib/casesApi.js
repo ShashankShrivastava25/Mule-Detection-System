@@ -59,3 +59,8 @@ function tierFor(score) {
   if (score >= 20) return 'watch'
   return 'safe'
 }
+
+// Direct URL to a case's SAR PDF (opened/downloaded by the browser).
+export function reportUrl(id) {
+  return `${BASE}/cases/${id}/report`
+}
