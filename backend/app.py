@@ -19,6 +19,7 @@ from features.health import bp as health_bp
 from features.metrics import bp as metrics_bp
 from features.predict import bp as predict_bp
 from features.retrain import bp as retrain_bp
+from features.stream import bp as stream_bp
 
 configure_logging()
 log = logging.getLogger("app")
@@ -35,6 +36,7 @@ def create_app() -> Flask:
     app.register_blueprint(retrain_bp)
     app.register_blueprint(explain_bp)
     app.register_blueprint(cases_bp)
+    app.register_blueprint(stream_bp)
     try:
         init_db()
     except Exception as exc:
