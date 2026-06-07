@@ -35,4 +35,6 @@ Base = declarative_base()
 def init_db() -> None:
     """Create tables if they don't exist. Idempotent."""
     from features.cases import models  # noqa: F401
+    from features.alerts import models as _alerts_models  # noqa: F401
+
     Base.metadata.create_all(bind=ENGINE)

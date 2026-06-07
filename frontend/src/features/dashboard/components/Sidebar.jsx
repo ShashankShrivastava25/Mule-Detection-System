@@ -173,6 +173,12 @@ export default function Sidebar({ online = false, mobileOpen = false, onClose })
         {/* Footer link */}
         <div className="px-4 pb-5">
           <Link
+            to="/alerts"
+            className="flex items-center gap-2 text-xs font-medium text-brand-600 dark:text-brand-300 hover:opacity-80 transition px-2"
+          >
+            → Alert Ingestion
+          </Link>
+          <Link
             to="/live"
             className="flex items-center gap-2 text-xs font-medium text-brand-600 dark:text-brand-300 hover:opacity-80 transition px-2"
           >

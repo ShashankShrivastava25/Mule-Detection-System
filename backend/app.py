@@ -2,6 +2,7 @@
 
 Run with `python app.py` (development) or via a WSGI server pointed at `create_app()`.
 """
+
 from __future__ import annotations
 
 import logging
@@ -20,6 +21,8 @@ from features.metrics import bp as metrics_bp
 from features.predict import bp as predict_bp
 from features.retrain import bp as retrain_bp
 from features.stream import bp as stream_bp
+from features.stream import bp as stream_bp
+from features.alerts import bp as alerts_bp
 
 configure_logging()
 log = logging.getLogger("app")
@@ -37,6 +40,7 @@ def create_app() -> Flask:
     app.register_blueprint(explain_bp)
     app.register_blueprint(cases_bp)
     app.register_blueprint(stream_bp)
+    app.register_blueprint(alerts_bp)
     try:
         init_db()
     except Exception as exc:
